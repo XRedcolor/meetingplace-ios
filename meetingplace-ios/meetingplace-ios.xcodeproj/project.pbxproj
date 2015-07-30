@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0CEC821B69C941007B5318 /* JVLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0CEC811B69C941007B5318 /* JVLogFormatter.m */; };
 		3BF650D61B69C28D002C50E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF650D51B69C28D002C50E9 /* main.m */; };
 		3BF650D91B69C28D002C50E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF650D81B69C28D002C50E9 /* AppDelegate.m */; };
 		3BF650DC1B69C28D002C50E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF650DB1B69C28D002C50E9 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		3B0CEC7F1B69C628007B5318 /* meetingplace-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "meetingplace-PrefixHeader.pch"; sourceTree = "<group>"; };
+		3B0CEC801B69C941007B5318 /* JVLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JVLogFormatter.h; path = Model/JVLogFormatter.h; sourceTree = "<group>"; };
+		3B0CEC811B69C941007B5318 /* JVLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JVLogFormatter.m; path = Model/JVLogFormatter.m; sourceTree = "<group>"; };
 		3BF650D01B69C28D002C50E9 /* meetingplace-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meetingplace-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF650D41B69C28D002C50E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BF650D51B69C28D002C50E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0CEC831B69C950007B5318 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B0CEC801B69C941007B5318 /* JVLogFormatter.h */,
+				3B0CEC811B69C941007B5318 /* JVLogFormatter.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3BF650C71B69C28D002C50E9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +101,7 @@
 		3BF650D21B69C28D002C50E9 /* meetingplace-ios */ = {
 			isa = PBXGroup;
 			children = (
-				3BF650D71B69C28D002C50E9 /* AppDelegate.h */,
-				3BF650D81B69C28D002C50E9 /* AppDelegate.m */,
+				3B0CEC831B69C950007B5318 /* Model */,
 				3BF650DA1B69C28D002C50E9 /* ViewController.h */,
 				3BF650DB1B69C28D002C50E9 /* ViewController.m */,
 				3BF650DD1B69C28D002C50E9 /* Main.storyboard */,
@@ -104,6 +115,8 @@
 		3BF650D31B69C28D002C50E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BF650D71B69C28D002C50E9 /* AppDelegate.h */,
+				3BF650D81B69C28D002C50E9 /* AppDelegate.m */,
 				3BF650D41B69C28D002C50E9 /* Info.plist */,
 				3BF650D51B69C28D002C50E9 /* main.m */,
 				3B0CEC7F1B69C628007B5318 /* meetingplace-PrefixHeader.pch */,
@@ -281,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF650DC1B69C28D002C50E9 /* ViewController.m in Sources */,
+				3B0CEC821B69C941007B5318 /* JVLogFormatter.m in Sources */,
 				3BF650D91B69C28D002C50E9 /* AppDelegate.m in Sources */,
 				3BF650D61B69C28D002C50E9 /* main.m in Sources */,
 			);

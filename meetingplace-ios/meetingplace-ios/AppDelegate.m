@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JVLogFormatter.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // Initialize CocoaLumberjack
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setLogFormatter:[[JVLogFormatter alloc] init]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor whiteColor] backgroundColor:[UIColor redColor] forFlag:DDLogFlagError];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blackColor] backgroundColor:[UIColor yellowColor] forFlag:DDLogFlagWarning];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blackColor] backgroundColor:[UIColor greenColor] forFlag:DDLogFlagInfo];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor whiteColor] backgroundColor:[UIColor magentaColor] forFlag:DDLogFlagDebug];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blackColor] backgroundColor:[UIColor cyanColor] forFlag:DDLogFlagVerbose];
+    
     return YES;
 }
 

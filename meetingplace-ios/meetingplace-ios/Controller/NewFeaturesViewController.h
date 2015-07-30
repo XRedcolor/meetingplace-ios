@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewFeaturesViewController.h
 //  meetingplace-ios
 //
 //  Created by XRedcolor on 15/7/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NewFeaturesViewController : UIViewController
 
 @end
-

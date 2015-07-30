@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Features View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="NewFeaturesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADH-zs-Uga">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="aJE-Ff-I5h"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ce9-pv-ih4">
+                                <rect key="frame" x="280" y="533" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ADH-zs-Uga" secondAttribute="trailing" id="26F-GI-8QO"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ce9-pv-ih4" secondAttribute="bottom" constant="30" id="5vz-yI-eop"/>
+                            <constraint firstAttribute="centerX" secondItem="ce9-pv-ih4" secondAttribute="centerX" id="Gu8-hF-SLW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ADH-zs-Uga" secondAttribute="bottom" id="OmU-Yr-4UW"/>
+                            <constraint firstItem="ADH-zs-Uga" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="VoM-kQ-KEC"/>
+                            <constraint firstItem="ADH-zs-Uga" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tnW-mh-OUG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageCountPageControl" destination="ce9-pv-ih4" id="6t9-Eo-KG9"/>
+                        <outlet property="pageScrollView" destination="ADH-zs-Uga" id="hEH-3h-er5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
